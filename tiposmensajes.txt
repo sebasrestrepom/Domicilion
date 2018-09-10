@@ -1,0 +1,57 @@
+# mensaje de texto
+{
+	"speech": "hola mundo",
+	"platform": "facebook",
+	"type": 0
+}
+
+# Imagen
+{
+	"messages": 
+	[
+		{
+			"imageUrl": "https://frasesparami.com/wp-content/uploads/2017/06/corazones-con-frases-300x300.jpg",
+			"platform": "facebook",
+			"type": 3
+		}
+	]
+}
+
+# Card
+{
+	"messages": 
+	[
+		{
+			"buttons": 
+			[
+				{
+					"postback": "Card Link URL or text",
+					"text": "Card Link Title"
+				}
+			],
+			"imageUrl": "https://frasesparami.com/wp-content/uploads/2017/06/corazones-con-frases-300x300.jpg",
+			"platform": "facebook",
+			"subtitle": "Card Subtitle",
+			"title": "Card Title",
+			"type": 1
+		}
+	] 
+}
+
+# quick reply
+{
+	"messages": 
+	[
+		{
+			"platform": "facebook",
+			"replies": 
+			[
+				"Quick reply 1",
+				"Quick reply 2",
+				"Quick reply 3"
+			],
+			"title": "Quick Reply Title",
+			"type": 2
+		}
+	]
+}

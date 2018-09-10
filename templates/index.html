@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116276042-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116276042-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Don Domicilión - Tu pedido en par boliones</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='device-mockups/device-mockups.min.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/new-age.min.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+    page_id="904988643007900"
+    ref="esto_es_una_prueba"
+    logged_in_greeting="Hijito, ¿qué se te antoja?"
+    logged_out_greeting="Hijito, ¿qué se te antoja?">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Don Domicilión</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#messenger">Messenger</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#features">Funcionalidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contáctame</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">¿Hambre?, ¡calma! escríbeme al messenger y te haré llegar tu pedido en par boliones.</h1>
+              <a href="#messenger" class="btn btn-outline btn-xl js-scroll-trigger">¡Inicia tu pedido!</a>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6 portrait gold">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="{{ url_for('static', filename='images/pantallazo-1.png') }}" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="download bg-primary text-center" id="messenger">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">¡Tu comida en par boliones!</h2>
+            <p>Descubre la nueva manera de pedir tu comida sin tener que descargar aplicaciones</p>
+            <div class="badges">
+              <a class="badge-link" href="http://m.me/dondomicilion" target="_blank"><img src="{{ url_for('static', filename='images/facebook-messenger.svg') }}" alt="Facebook Messenger"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Acceso fácil y rápido a tus antojos</h2>
+          <p class="text-muted">Tan sencillo como escribirle a tu mejor amigo, así de fácil tienes la comida en la puerta de tu casa</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6 portrait gold">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="{{ url_for('static', filename='images/pantallazo-1.png') }}" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-check text-primary"></i>
+                    <h3>Fácil</h3>
+                    <p class="text-muted">Escribeme como si estuvieras hablando con tu mejor amigo</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-screen-smartphone text-primary"></i>
+                    <h3>Sin aplicaciones</h3>
+                    <p class="text-muted">No necesitas instalar aplicaciones extras que gastan espacio</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-energy text-primary"></i>
+                    <h3>Rápido</h3>
+                    <p class="text-muted">Te conecto con los mejores restaurantes de la ciudad</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-clock text-primary"></i>
+                    <h3>Tiempo de espera</h3>
+                    <p class="text-muted">Evita teléfonos ocupados o mala atención</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <div class="container">
+          <h2>¿Hambre?<br>Calmala ya</h2>
+          <a href="http://m.me/dondomicilion" class="btn btn-outline btn-xl js-scroll-trigger" target="_blank">Tu pedido en par boliones</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <section class="contact bg-primary" id="contact">
+      <div class="container">
+        <h2>¡Yo
+          <i class="fa fa-heart"></i>
+          a mis nuevos nietecitos!</h2>
+        <ul class="list-inline list-social">
+          <li class="list-inline-item social-google-plus">
+            <a href="http://instagram.com/dondomicilion">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-facebook">
+            <a href="http://facebook.com/dondomicilion">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; Don Domicilión 2018. Todos los derechos reservados.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Política de tratamiento y protección de la información</a>
+          </li>
+          <li class="list-inline-item">|</li>
+          <li class="list-inline-item">
+            <a href="#">Terminos y condiciones</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='js/new-age.min.js') }}"></script>
+
+  </body>
+
+</html>

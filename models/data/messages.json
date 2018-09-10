@@ -1,0 +1,730 @@
+[
+	{
+		"speech": "Claro {genero}, la hora es: {hora}, el numero de día en la semana es: {dia}. Mis creadores son: Sebastián D Restrepo Moreno y Jorge eduardo Olarte",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "queHoraEs",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Lo siento {genero}, no entiendo lo que me quieres decir.",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "sinRespuesta",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Pero dime, ¿qué quieres comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "sinRespuesta",
+		"format" : true,
+		"order" : 2
+	},
+	{
+		"speech": "{genero}, por ser un usuario nuevo tienes 10% de descuentos en la comida que pidas",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "cantidadPlatos",
+		"context": "descuento",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero}, por ser un usuario nuevo tienes 10% de descuentos en la comida que pidas",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarRestaurante",
+		"context": "descuento",
+		"format" : true,
+		"order" : 1
+	},
+
+	{
+		"speech": "Hola {first_name}, bienvenido a este sitio, es un placer poder servirte",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "saludar",
+		"context" : "recurrente",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": [],
+		"title": "¿Cuál de estas comidas te gustaría comer?",
+		"type": 2,
+		"intent" : "saludar",
+		"context" : "recurrente",
+		"format" : true,
+		"order" : 2
+	},
+	{
+	 	"speech": "¿Qué quieres comer hoy?",
+	 	"platform": "facebook",
+	 	"type": 0,
+	 	"intent" : "saludar",
+	 	"context" : "old",
+		"order" : 2
+	},
+	{
+		"speech": "{genero}, disculpame pero en este momento no tengo {anyComida} en la carta, te prometo que voy a encontrar un restaurante que tenga esa comida para podertela ofrecer lo antes posible",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirComida",
+		"context" : "sinComida",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": [],
+		"title": "Por el momento te puedo ofrecer alguna de éstas comidas",
+		"type": 2,
+		"intent" : "pedirComida",
+		"context" : "sinComida",
+		"format" : true,
+		"order" : 2
+	},
+	{
+		"speech": "Claro {genero}, ¿en dónde quieres comer tu {nomComida}?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirComida",
+		"context" : "claro",
+		"format" : true,
+		"order" : 1		
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{slug}",
+				"text": "{nombre}"
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"title": "{nombre}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "pedirComida",
+		"context" : "restaurantes",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"speech": "{genero} que mala suerte, te cuento que la comida que buscas si la tengo pero el restaurante está cerrado 😖",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirComida",
+		"context" : "cerrado",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"speech": "Te parece si intentamos con otra comida, dime ¿que otra cosa te gustaría comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirComida",
+		"context" : "cerrado",
+		"order" : 2	
+	},
+	{
+		"speech": "Mira lo que te voy a enviar. ¿cuál es el que quieres comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarRestaurante",
+		"context" : "mensaje",
+		"order" : 1
+	},
+	{	"platform": "facebook",
+		"replies": 
+		[
+			"cambiar restaurante",
+			"no, permanecer aquí"
+		],
+		"title": "{genero} la {nomComida} que buscas te la puedo ofrecer en otro restaurante, ¿Quieres cambiar de restaurante?",
+		"platform": "facebook",
+		"type": 2,
+		"intent" : "seleccionarRestaurante",
+		"context" : "error",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{codigo}",
+				"text": "{text}"
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"title": "{comida}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "seleccionarRestaurante",
+		"context" : "platos",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"speech": "¿De qué tamaño?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarTamano",
+		"context" : "mensaje",
+		"order" : 1
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{codigo}",
+				"text": "Por solo ${precio}"
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"subtitle": "{descripcion}",
+		"title": "{nombre}",
+		"type": 1,
+		"intent" : "seleccionarTamano",
+		"context" : "mostrarTamano",
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"Si, agregar más",
+			"No, quiero comer ya"
+		],
+		"title": "{genero}, ¿quieres agregar algo más al pedido?",
+		"type": 2,
+		"intent" : "mostrarAgregarComida",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"1",
+			"2",
+			"3",
+			"4"
+		],
+		"title": "{genero}, ¿dime cuantos quieres?",
+		"type": 2,
+		"intent" : "mostrarCantidadPlatos",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "¿Qué otra cosa se te antoja comer de {restaurante}?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "siSeleccionarComida",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero} aún no tengo nada para llevar a tu casa, dime ¿qué quieres comer hoy?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noSeleccionarComida",
+		"context" : "error",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero} {restaurante}",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noSeleccionarComida",
+		"context" : "domicilio",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"Sí, confirmar envío",
+			"Quiero agregar más",
+			"Cancelar pedido"
+		],
+		"title": "Confirmarme si el pedido que incluye:\n{msg}Por valor total de ${total} te lo hago llegar.",
+		"type": 2,
+		"intent" : "noSeleccionarComida",
+		"context" : "factura",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"Quiero agregar más",
+			"Cancelar pedido"
+		],
+		"title": "El valor del pedido no supera el valor minimo de pedidos en el restaurante. El pedido que incluye:\n{msg}Por valor total de ${total} Por favor agrega otros productos ",
+		"type": 2,
+		"intent" : "noSeleccionarComida",
+		"context" : "minimo",
+		"format" : true,
+		"order" : 1
+	},
+	
+	{
+		"speech": "{genero}, tu pedido está cancelado, lo siento 😥 quedo más triste que celador sin radio.",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "cancelarPedido",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Espero no te olvides de mi y regreses pronto 😉",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "cancelarPedido",
+		"format" : true,
+		"order" : 2
+	},
+	{
+		"speech": "{genero} ahora dime si tienes alguna observación como: devuelta de cuanto, punto de referencia o solicitud especial sobre el pedido",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "confirmarPedido",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Listo, dime tu dirección para llevarte el pedido",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "agregarObservacion",
+		"format" : false,
+		"order" : 1
+	},
+	{
+		"speech": "Ahora dime tu telefono para poder comunicarme contigo en caso de algún problema",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "ingresarDireccion",
+		"format" : false,
+		"order" : 1
+	},
+	{
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"type": 3,
+		"intent" : "ingresarTelefono",
+		"context" : "imagen",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero} acabo de enviar a uno de mis nietecitos por tu pedido. Calma tu comida llegara pronto",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "ingresarTelefono",
+		"context" : "final",
+		"format" : true,
+		"order" : 2
+	},
+	{
+		"speech": "Pedido en {restaurante}\n\n{genero} está es tu orden:\n{msg}\nPor valor total de ${total}",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarPedido",
+		"context" : "en_proceso",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero} aún no tienes nada en proceso de compra 🍴",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarPedido",
+		"context" : "sinDatos",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{restaurante}\n\nPedido en camino: 🛵\n{msg}\nTotal a cancelar de ${total}",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarPedido",
+		"context" : "finalizado",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": [],
+		"title": "Según los gustos de tus amigos te puedo recomendar alguna de estás opciones",
+		"type": 2,
+		"intent" : "recomendarIndeciso",
+		"context" : "existe",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Lo siento {genero} en este momento todos los restaurantes están cerrados",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "recomendarIndeciso",
+		"context" : "nohay",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Espero regreses pronto",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "recomendarIndeciso",
+		"context" : "nohay",
+		"format" : true,
+		"order" : 2
+	},
+	{
+		"speech": "{genero} el restaurante {restaurante} en este momento está cerrado",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "recomendarIndeciso",
+		"context" : "restauranteCerrado",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{slug}",
+				"text": "{nombre}"
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"title": "{nombre}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "darPermisos",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"platform": "facebook",
+		"replies": [],
+		"title": "{genero}, que gusto me da leerte. Para empezar me podrías decir en que ciudad te encuentras",
+		"type": 2,
+		"intent" : "saludar",
+		"context" : "primeraVez",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": [],
+		"title": "{genero}, me podrías decir ahora donde te encuentras",
+		"type": 2,
+		"intent" : "cambiarCiudad",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero}, lamento decirte que en tu ciudad no tenemos servicio",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noHayCiudad",
+		"context" : "cerrado",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero}, estoy ansioso por llegar a ti, esperame muy pronto...",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noHayCiudad",
+		"context" : "pereira",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero}, el {restaurante} está abierto, ¿qué te gustaría comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarDomicilio",
+		"context" : "abierto",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Lamento decirte que el {restaurante} está cerrado",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarDomicilio",
+		"context" : "cerrado",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero}, lo siento pero en el momento no cuento con {restaurante}",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "consultarDomicilio",
+		"context" : "noExiste",
+		"format" : true,
+		"order" : 1
+	},
+	{
+
+		"speech": "{genero}, disculpame pero en este momento no tengo {anyComida} en la carta, te prometo que voy a encontrar un restaurante que tenga esa comida para podertela ofrecer lo antes posible",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+		"context" : "noHayComida",
+		"format" : true,
+		"order" : 1
+				
+	},
+	{
+		"speech": "Claro {genero}, ¿en dónde quieres comer tu {nomAlmuerzo}?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+		"context" : "claroDonde",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{slug}",
+				"text": "{nombre}"
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"title": "{nombre}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "pedirAlmuerzo",
+		"context" : "restaurantes",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"speech": "{genero} que mala suerte, te cuento que la comida que buscas si la tengo pero el restaurante está cerrado 😖",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+		"context" : "malaSuerte",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "Te parece si intentamos con otra comida, dime ¿que otra cosa te gustaría comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+		"context" : "malaSuerte",
+		"order" : 2	
+	},
+	{
+		"speech": "{genero}, disculpame pero en este momento no tengo {nomAlmuerzo} en la carta, te prometo que voy a encontrar un restaurante que tenga esa comida para podertela ofrecer lo antes posible",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+		"context" : "sinComida",
+		"order" : 1	
+	},
+	{
+		"speech": "Por el momento me puedes decir ¿qué otra comida se te antoja comer?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "pedirAlmuerzo",
+	    "context" : "sinComida",
+	    "order" : 2
+		
+	},
+    {
+		"speech": "Disculpa no tengo esa comida en este momento, ¿Qué otra cosa se te antoja?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarRestauranteAlmuerzo",
+        "context" : "error",
+        "order" : 1
+	},
+   	{
+		"speech": "El almuerzo viene con arroz, ensalada, tajadas ¿con qué principio quieres acompñarlo?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarRestauranteAlmuerzo",
+	    "context" : "textoindicio",
+	    "order" : 1
+	},
+	{
+		"speech": " ¿con qué carne quieres acompañarlo?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarCarneAlmuerzo",
+		"context" : "textocarne",
+	    "order" : 1
+	},
+	{
+		"speech": " ¿con qué jugo quieres acompañarlo?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarJugoAlmuerzo",
+		"context" : "textojugo",
+	    "order" : 1
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{nombre}",
+				"text":"{nombre}"
+
+
+			}
+		],
+		"imageUrl": "{imagen}",
+		"platform": "facebook",
+		"title": "{nombre}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "seleccionarRestauranteAlmuerzo",
+		"context" : "principio",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{nombre}",
+				"text": "{nombre}"
+
+
+			}
+		],
+		"imageUrl":"{imagen}",
+		"platform": "facebook",
+		"title": "{nombre}",
+		"subtitle": "{descripcion}",
+		"type": 1,
+		"intent" : "seleccionarCarneAlmuerzo",
+		"context" : "carne",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"buttons": 
+		[
+			{
+				"postback": "{nombre}",
+				"text": "{nombre}"
+
+
+			}
+		],
+		"imageUrl":"{imagen}",
+		"platform": "facebook",
+		"subtitle":  "{descripcion}",
+		"title": "{nombre}",
+		"type": 1,
+		"intent" : "seleccionarJugoAlmuerzo",
+		"context" : "jugo",
+		"format" : true,
+		"order" : 1	
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"1",
+			"2",
+			"3",
+			"4"
+		],
+		"title": "{genero}, ¿dime cuantos quieres?",
+		"type": 2,
+		"intent" : "cantidadPlatosAlmuerzo",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"Si, agregar más",
+			"No, quiero comer ya"
+		],
+		"title": "{genero}, ¿quieres agregar algo más al pedido?",
+		"type": 2,
+		"intent" : "mostrarAgregarAlmuerzo",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "¿Qué otra cosa se te antoja comer ?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "siSeleccionarAlmuerzo",
+		"context" : "queOtra",
+		"format" : true,
+		"order" : 1
+		
+	},
+	{
+		"speech": "{genero} aún no tengo nada para llevar a tu casa, dime ¿qué quieres comer hoy?",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noSeleccionarAlmuerzo",
+		"context" : "nada",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"speech": "{genero} {restaurante}",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "noSeleccionarAlmuerzo",
+		"context" : "domicilio",
+		"format" : true,
+		"order" : 1
+	},
+	{
+		"platform": "facebook",
+		"replies": 
+		[
+			"Sí, confirmar envío",
+			"No, cancelar pedido"
+		],
+		"title": "Confirmarme si el pedido que incluye:\n{msg}Por valor total de ${total} te lo hago llegar.",
+		"type": 2,
+		"intent" : "noSeleccionarAlmuerzo",
+		"context" : "factura",
+		"format" : true,
+		"order" : 1
+	},			
+	{
+		"speech": "Disculpa {genero} pero me podrías repetir qué comida estas buscando",
+		"platform": "facebook",
+		"type": 0,
+		"intent" : "seleccionarComida",
+		"context" : "error",
+		"format" : true,
+		"order" : 1
+	}
+]
