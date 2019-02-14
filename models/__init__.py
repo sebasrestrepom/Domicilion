@@ -23,10 +23,10 @@ def load_data(model, folder = 'data'):
 			model.save(json_data)
 
 
-#URI = 'mongodb://heroku_01fb25zl:kcnaoo0asd6k9c6fovth6iuv5r@ds247688.mlab.com:47688/heroku_01fb25zl'
+URI = 'mongodb://heroku_01fb25zl:kcnaoo0asd6k9c6fovth6iuv5r@ds247688.mlab.com:47688/heroku_01fb25zl'
 
-URL = 'localhost'
-PORT = 27017
+#URL = 'localhost'
+#PORT = 27017
 
 USER_COLLECTION = 'users'
 MESSAGE_COLLECTION = 'messages'
@@ -35,11 +35,11 @@ RESTAURANTE_COLLECTION = 'restaurantes'
 ORDEN_COLLECTION = 'ordenes'
 
 #--------------------------------------este es para utilizarlo con el servidor online--------
-#client = MongoClient(URI)
-#database = client.get_default_database()
+client = MongoClient(URI)
+database = client.get_default_database()
 #---------------------------------------esto ers para utilizarlo desde mongodb----------------
-client = MongoClient(URL, PORT)
-database = client.domicilion
+#client = MongoClient(URL, PORT)
+#database = client.domicilion
 
 TopicModel = Topic(database, TOPIC_COLLECTION)
 
